@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Isaac Niyonzima - Tech CV</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans">
+
+<div class="max-w-5xl mx-auto my-10 p-8 bg-white dark:bg-gray-800 rounded-lg shadow-lg" id="cvContent">
+  <!-- Header -->
+  <div class="text-center mb-8">
+    <h1 class="text-5xl font-bold text-blue-600 dark:text-blue-400">Isaac Niyonzima</h1>
+    <p class="text-lg mt-2">Full-Stack Developer | AI & ML Enthusiast | Tech Innovator</p>
+  </div>
+
+  <!-- Contact -->
+  <div class="mb-6">
+    <h2 class="text-2xl font-semibold text-blue-500 mb-2">Contact</h2>
+    <ul class="list-disc pl-6 space-y-1">
+      <li>Email: <a href="niyonzimaisaac89@gmail.com" class="text-blue-600 hover:underline">niyonzimaisaac89@gmail.com</a></li>
+      <li>Phone: +250782147772</li>
+      <li>LinkedIn: <a href="https://linkedin.com/in/isaacniyonzima" target="_blank" class="text-blue-600 hover:underline">linkedin.com/in/isaacniyonzima</a></li>
+      <li>GitHub: <a href="https://github.com/Niyonzima123" target="_blank" class="text-blue-600 hover:underline">github.com/Niyonzima123</a></li>
+      <li>Portfolio: <a href="index.html" class="hover:text-blue-500">Niyonzima's Portfolio</a></li>
+    </ul>
+  </div>
+
+  <!-- Professional Summary -->
+  <div class="mb-6">
+    <h2 class="text-2xl font-semibold text-blue-500 mb-2">Professional Summary</h2>
+    <p>Full-Stack Software Engineer with expertise in Python, Django, JavaScript, AI/ML, and data-driven applications. Skilled in building scalable web apps, AI pipelines, and innovative tech solutions. Passionate about automation and digital transformation projects.</p>
+  </div>
+
+  <!-- Technical Skills -->
+  <div class="mb-6">
+    <h2 class="text-2xl font-semibold text-blue-500 mb-2">Technical Skills</h2>
+    <ul class="list-disc pl-6 space-y-1">
+      <li>Languages: Python, JavaScript, C, PHP</li>
+      <li>Web Development: Django, React, HTML5, CSS3, TailwindCSS</li>
+      <li>Databases: PostgreSQL, MySQL, SQLite</li>
+      <li>AI/ML: TensorFlow, scikit-learn, pandas, NumPy</li>
+      <li>Tools & Platforms: Git/GitHub, Docker, Linux, AWS</li>
+    </ul>
+  </div>
+
+  <!-- Projects & Portfolio -->
+  <div class="mb-6">
+    <h2 class="text-2xl font-semibold text-blue-500 mb-4">Projects & Portfolio</h2>
+    <div class="space-y-4">
+      <div class="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg shadow">
+        <h3 class="font-semibold text-lg text-blue-500">Vendor Business Management System</h3>
+        <img src="assets/images/cs_project.png" alt="Vendor Project" class="mt-2 rounded shadow"/>
+        <p class="mt-2">Django + PostgreSQL | AI Analytics</p>
+        <p><a href="https://github.com/Niyonzima123/my_business_app" target="_blank" class="text-blue-600 hover:underline">GitHub Link</a></p>
+      </div>
+
+      <div class="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg shadow">
+        <h3 class="font-semibold text-lg text-blue-500">AI Chatbot Assistant</h3>
+        <img src="assets/images/ai_chatbot.png" alt="AI Chatbot" class="mt-2 rounded shadow"/>
+        <p class="mt-2">Python + NLP | Interactive Demo</p>
+        <p><a href="https://replit.com/@isaacniyonzima/AiChatbot" target="_blank" class="text-blue-600 hover:underline">Live Demo</a></p>
+      </div>
+
+      <div class="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg shadow">
+        <h3 class="font-semibold text-lg text-blue-500">Portfolio Website</h3>
+        <img src="assets/images/portfolio.png" alt="Portfolio" class="mt-2 rounded shadow"/>
+        <p class="mt-2">HTML5 + TailwindCSS | Responsive & Interactive</p>
+        <p><a href="index.html" class="hover:text-blue-500">Visit Portfolio</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Certifications -->
+  <div class="mb-6">
+    <h2 class="text-2xl font-semibold text-blue-500 mb-2">Certifications</h2>
+    <ul class="list-disc pl-6 space-y-1">
+      <li>ALX Africa – AI & Professional Foundations</li>
+      <li>HarvardX CS50 – Computer Science</li>
+      <li>IBM AI & Data Science</li>
+    </ul>
+  </div>
+
+  <!-- Education -->
+  <div class="mb-6">
+    <h2 class="text-2xl font-semibold text-blue-500 mb-2">Education</h2>
+    <ul class="list-disc pl-6 space-y-1">
+      <li>B.Sc. Computer Science – Catholic University of Rwanda (2021-2025)</li>
+      <li>Advanced Level Certificate – Math, Biology, Chemistry (2019-2021)</li>
+    </ul>
+  </div>
+
+  <!-- References -->
+  <div class="mb-6">
+    <h2 class="text-2xl font-semibold text-blue-500 mb-2">References</h2>
+    <p>Available upon request</p>
+  </div>
+
+  <!-- Download -->
+  <div class="text-center mt-8">
+    <button id="downloadBtn" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Download CV as PDF</button>
+  </div>
+</div>
+
+<script>
+document.getElementById('downloadBtn').addEventListener('click', async () => {
+  const { jsPDF } = window.jspdf;
+  const cvContent = document.getElementById('cvContent');
+
+  // Use html2canvas to capture the div as an image
+  const canvas = await html2canvas(cvContent, { scale: 2 });
+  const imgData = canvas.toDataURL('image/png');
+
+  const pdf = new jsPDF('p', 'pt', 'a4');
+  const pdfWidth = pdf.internal.pageSize.getWidth();
+  const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+
+  pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+  pdf.save('Isaac_Niyonzima_Tech_CV.pdf');
+});
+</script>
+
+</body>
+</html>

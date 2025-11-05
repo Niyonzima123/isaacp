@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academic Journey | Isaac Niyonzima</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Fade-in animation */
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+  </style>
+  <script>
+    function toggleTheme() { document.documentElement.classList.toggle('dark'); }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const elements = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => { 
+          if(entry.isIntersecting) { 
+            entry.target.classList.add('visible'); 
+            observer.unobserve(entry.target); 
+          }
+        });
+      }, { threshold: 0.1 });
+      elements.forEach(el => observer.observe(el));
+    });
+  </script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center px-8 py-4 bg-white dark:bg-gray-800 shadow-md sticky top-0 fade-in z-20">
+    <h1 class="text-2xl font-bold text-blue-600 dark:text-blue-400">Isaac Niyonzima</h1>
+    <div class="space-x-6">
+      <a href="index.html" class="hover:text-blue-500">Home</a>
+      <a href="academic.html" class="text-blue-500 font-semibold">Academics</a>
+      <a href="certification.html" class="hover:text-blue-500">Certifications</a>
+      <a href="about.html" class="hover:text-blue-500">About</a>
+    </div>
+    <button onclick="toggleTheme()" class="px-3 py-1 border rounded-md text-sm">Toggle Theme</button>
+  </nav>
+
+  <!-- Header -->
+  <header class="px-8 py-16 text-center bg-gradient-to-r from-blue-100 to-blue-200 dark:from-gray-800 dark:to-gray-700 fade-in">
+    <h2 class="text-4xl font-bold mb-4">My Academic Journey</h2>
+    <p class="text-lg max-w-3xl mx-auto">Exploring technology, science, and innovation through formal education, online learning, and research-driven projects.</p>
+  </header>
+
+  <!-- University Section -->
+  <section class="px-8 py-16 fade-in">
+    <h3 class="text-3xl font-bold mb-8 text-center">Bachelor’s Degree in Computer Science</h3>
+    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8 max-w-5xl mx-auto">
+      <h4 class="text-xl font-semibold text-blue-500 mb-2">Catholic University of Rwanda</h4>
+      <p class="mb-4">Bachelor of Science in Computer Science — School of Science and Technology</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Core Programming Languages: Python, JavaScript, C, PHP</li>
+        <li>Web Development: Django Framework, HTML5, CSS3, TailwindCSS</li>
+        <li>Database Systems: MySQL, PostgreSQL, SQLite</li>
+        <li>Software Engineering: Design Patterns, Agile, Git/GitHub</li>
+        <li>Artificial Intelligence: Machine Learning, Neural Networks, Data Processing</li>
+        <li>Networking: Computer Networks, Cloud Integration, Security Principles</li>
+      </ul>
+      <p class="mt-6">Focused on building practical projects and research around digital business systems and AI-driven development tools. Final project: <strong>Vendor Business Management System</strong> with Django and PostgreSQL.</p>
+      <img src="assets/images/cs_project.png" alt="Vendor Management Project" class="mt-6 rounded-lg shadow-lg" />
+    </div>
+  </section>
+
+  <!-- High School Section -->
+  <section class="px-8 py-16 bg-gray-50 dark:bg-gray-800 fade-in">
+    <h3 class="text-3xl font-bold mb-8 text-center">High School Education</h3>
+    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md p-8 max-w-5xl mx-auto">
+      <h4 class="text-xl font-semibold text-blue-500 mb-2">Advanced Level Certificate</h4>
+      <p class="mb-4">Majored in Mathematics, Biology, and Chemistry — strong analytical foundation for problem-solving in computer science.</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Quantitative reasoning and analytical thinking</li>
+        <li>Scientific research and experimentation</li>
+        <li>Teamwork and leadership skills via academic projects</li>
+      </ul>
+      <img src="assets/images/highschool.jpg" alt="High School Certificate" class="mt-6 rounded-lg shadow-lg" />
+    </div>
+  </section>
+
+  <!-- Online Academic Platforms -->
+  <section class="px-8 py-16 fade-in">
+    <h3 class="text-3xl font-bold mb-8 text-center">Academic Platforms & Research</h3>
+    <div class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+        <h4 class="font-semibold text-blue-500 mb-2">HarvardX | edX</h4>
+        <p>Courses: Introduction to CS (CS50), Web Dev with Python/JS, AI fundamentals. Hands-on projects simulating real-world computing problems.</p>
+        <a href="https://www.edx.org/course/cs50s-introduction-to-computer-science" target="_blank" class="text-blue-600 hover:underline mt-2 inline-block">View Course →</a>
+        <img src="assets/images/harvardx.png" alt="HarvardX" class="mt-4 rounded-lg shadow-lg" />
+      </div>
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+        <h4 class="font-semibold text-blue-500 mb-2">ALX Africa</h4>
+        <p>Trained in Professional Foundations, Virtual Assistance, and Essential AI Skills — emphasizing communication, leadership, and digital collaboration.</p>
+        <a href="https://www.alxafrica.com/" target="_blank" class="text-blue-600 hover:underline mt-2 inline-block">View Platform →</a>
+        <img src="assets/images/alx.png" alt="ALX Africa" class="mt-4 rounded-lg shadow-lg" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Recommendations Section -->
+  <section class="px-8 py-16 bg-gray-50 dark:bg-gray-800 fade-in">
+    <h3 class="text-3xl font-bold mb-8 text-center">Recommendations</h3>
+    <div class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+      <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6">
+        <p>"Isaac is an exceptional student with strong analytical skills and a passion for applying AI to real-world business solutions." – <strong>Prof. Jean Claude, Computer Science Department</strong></p>
+      </div>
+      <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6">
+        <p>"His dedication to mastering web development and AI is impressive, and he consistently delivers projects with professionalism and creativity." – <strong>Mentor, ALX Africa Program</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- References / Online Links Section -->
+  <section class="px-8 py-16 fade-in">
+    <h3 class="text-3xl font-bold mb-8 text-center">References & Online Resources</h3>
+    <div class="max-w-5xl mx-auto space-y-4 text-center">
+      <a href="https://www.edx.org/course/cs50s-introduction-to-computer-science" target="_blank" class="text-blue-600 hover:underline block">HarvardX CS50</a>
+      <a href="https://www.edx.org/course/introduction-to-artificial-intelligence-ai" target="_blank" class="text-blue-600 hover:underline block">HarvardX AI Fundamentals</a>
+      <a href="https://www.alxafrica.com/" target="_blank" class="text-blue-600 hover:underline block">ALX Africa Official Site</a>
+      <a href="https://www.coursera.org/" target="_blank" class="text-blue-600 hover:underline block">Coursera Online Courses</a>
+    </div>
+  </section>
+
+  <!-- Navigation -->
+  <div class="text-center py-10 fade-in">
+    <a href="certification.html" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Next: Certifications →</a>
+  </div>
+
+  <!-- Academic Highlights -->
+  <section class="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-gray-800 dark:to-gray-700 px-8 py-16 fade-in">
+    <div class="max-w-6xl mx-auto text-center space-y-10">
+      <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md p-8 space-y-4">
+        <h4 class="text-2xl font-bold text-blue-500 mb-4">Academic Highlights</h4>
+        <ul class="list-disc pl-6 space-y-2 text-left">
+          <li>🎓 Strong programming foundations in Python, JS, C, PHP applied to projects and practical problems.</li>
+          <li>💻 Built Vendor Business Management System using Django/PostgreSQL for practical application.</li>
+          <li>📚 Completed HarvardX CS50 and AI courses with real-world projects.</li>
+          <li>🛠️ ALX Africa training in Professional Foundations, Virtual Assistance, and AI skills.</li>
+          <li>🔬 High school Math, Biology, Chemistry foundation supports CS and AI problem-solving.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white text-center py-6 mt-8 fade-in">
+    <p>&copy; 2025 Isaac Niyonzima. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

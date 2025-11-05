@@ -1,0 +1,97 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; background: #0f0f1e; color: #e0e0ff; overflow-x: hidden; }
+
+#mainNav { background: rgba(10, 10, 30, 0.8); backdrop-filter: blur(10px); transition: 0.3s; }
+#mainNav.scrolled { background: rgba(10, 10, 30, 0.95); }
+
+.hero {
+  background: linear-gradient(-45deg, #4a00e0, #8e2de2, #00c6ff, #00ff88);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  position: relative;
+}
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+.glass-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(74, 0, 224, 0.3);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #4a00e0, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-gradient {
+  background: linear-gradient(45deg, #4a00e0, #00c6ff);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(74, 0, 224, 0.4);
+}
+.btn-gradient:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(74, 0, 224, 0.6);
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 5px solid #4a00e0;
+  box-shadow: 0 0 30px rgba(74, 0, 224, 0.5);
+}
+
+.cert-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 16px;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.9rem;
+  position: relative;
+  transition: 0.3s;
+}
+.cert-card:hover { background: rgba(74, 0, 224, 0.2); }
+.download-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #00ff88;
+  font-size: 1.2rem;
+}
+
+.progress { height: 8px; background: rgba(255,255,255,0.1); border-radius: 4px; }
+.progress-bar { background: linear-gradient(90deg, #4a00e0, #00c6ff); }
+
+.bg-gradient-dark { background: linear-gradient(135deg, #1a0033, #0f0f1e); }
+
+/* Animations */
+[data-animate] { opacity: 0; transform: translateY(30px); }
+.animate__fadeInLeft { animation: fadeInLeft 0.8s forwards; }
+.animate__fadeInUp { animation: fadeInUp 0.8s forwards 0.2s; }
+.animate__fadeInRight { animation: fadeInRight 0.8s forwards 0.4s; }
+
+@keyframes fadeInLeft { to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeInRight { to { opacity: 1; transform: translateY(0); } }

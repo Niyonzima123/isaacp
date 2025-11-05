@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Isaac Niyonzima | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function toggleTheme() {
+      document.documentElement.classList.toggle('dark');
+    }
+  </script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center px-8 py-4 bg-white dark:bg-gray-800 shadow-md sticky top-0 z-20">
+    <h1 class="text-2xl font-bold text-blue-600 dark:text-blue-400">Isaac Niyonzima</h1>
+    <div class="space-x-6">
+      <a href="index.html" class="hover:text-blue-500">Home</a>
+      <a href="academic.html" class="hover:text-blue-500">Academics</a>
+      <a href="certification.html" class="hover:text-blue-500">Certifications</a>
+      <a href="cv.html" class="hover:text-blue-500">Resume</a>
+      <a href="about.html" class="hover:text-blue-500">About</a>
+    </div>
+    <button onclick="toggleTheme()" class="px-3 py-1 border rounded-md text-sm">Toggle Theme</button>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="flex flex-col md:flex-row items-center justify-center text-center md:text-left px-8 py-16 bg-gradient-to-r from-blue-100 to-blue-200 dark:from-gray-800 dark:to-gray-700">
+    <div class="md:w-1/2 space-y-6">
+      <h2 class="text-4xl font-bold">Hey, I'm <span class="text-blue-600 dark:text-blue-400">Isaac Niyonzima</span></h2>
+      <p class="text-lg leading-relaxed">A passionate Computer Science student at the Catholic University of Rwanda, specializing in software development, AI, and digital innovation. I build practical tech solutions and continuously explore AI-assisted coding, data systems, and business tech management.</p>
+      <a href="about.html" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Learn More</a>
+    </div>
+    <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center">
+      <img src="assets/images/pro2.jpg" alt="Isaac Niyonzima" class="rounded-full w-64 h-64 shadow-lg border-4 border-blue-500" />
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="px-8 py-16">
+    <h3 class="text-3xl font-bold text-center mb-10">Technical & Soft Skills</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md">
+        <h4 class="font-semibold mb-3 text-blue-500">Programming & Tools</h4>
+        <p>Python, Django, PHP, MySQL, PostgreSQL, JavaScript, TailwindCSS, GitHub, XAMPP</p>
+      </div>
+      <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md">
+        <h4 class="font-semibold mb-3 text-blue-500">AI & Digital Skills</h4>
+        <p>Artificial Intelligence fundamentals, Prompt Engineering, Digital Workspaces, AI-powered system design</p>
+      </div>
+      <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md">
+        <h4 class="font-semibold mb-3 text-blue-500">Professional Skills</h4>
+        <p>Entrepreneurship, Virtual Assistance, Communication, Collaboration, Leadership, Creativity</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses Overview -->
+  <section class="px-8 py-16 bg-gray-50 dark:bg-gray-800">
+    <h3 class="text-3xl font-bold text-center mb-10">My Learning Journey</h3>
+    <div class="grid md:grid-cols-2 gap-10">
+      <div class="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-md">
+        <h4 class="font-semibold mb-2 text-blue-500">Bachelor’s Degree in Computer Science</h4>
+        <p>Currently pursuing at the Catholic University of Rwanda. Courses include Software Engineering, AI, Databases, Networking, and System Design.</p>
+      </div>
+      <div class="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-md">
+        <h4 class="font-semibold mb-2 text-blue-500">Online Courses & Certifications</h4>
+        <p>Completed programs with ALX Africa, HarvardX (edX), IBM, and British Council SoCreative eLearning, focusing on AI, Web Development, Digital Transformation, and Professional Skills.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- YouTube Tutorials Carousel -->
+  <section class="px-8 py-16">
+    <h3 class="text-3xl font-bold text-center mb-10">YouTube Tutorials</h3>
+    <div class="relative max-w-6xl mx-auto">
+      <div id="youtubeCarousel" class="flex overflow-x-auto scroll-smooth space-x-6 py-4 snap-x snap-mandatory">
+        <!-- Video 1 -->
+        <div class="flex-none w-80 rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-800 hover:scale-105 transition-transform snap-start">
+          <iframe class="w-full h-56" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1" title="Django Full-Stack Tutorial" frameborder="0" allowfullscreen></iframe>
+          <div class="p-4">
+            <h4 class="font-semibold text-blue-500 mb-2">Django Full-Stack Tutorial</h4>
+            <p>Step-by-step guide to building a Django web app from scratch.</p>
+          </div>
+        </div>
+        <!-- Video 2 -->
+        <div class="flex-none w-80 rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-800 hover:scale-105 transition-transform snap-start">
+          <iframe class="w-full h-56" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" title="AI Prompt Engineering Tutorial" frameborder="0" allowfullscreen></iframe>
+          <div class="p-4">
+            <h4 class="font-semibold text-blue-500 mb-2">AI Prompt Engineering Tutorial</h4>
+            <p>Learn how to leverage AI tools to improve coding workflows.</p>
+          </div>
+        </div>
+        <!-- Video 3 -->
+        <div class="flex-none w-80 rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-800 hover:scale-105 transition-transform snap-start">
+          <iframe class="w-full h-56" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3" title="Web Development Basics" frameborder="0" allowfullscreen></iframe>
+          <div class="p-4">
+            <h4 class="font-semibold text-blue-500 mb-2">Web Development Basics</h4>
+            <p>HTML, CSS, and JavaScript fundamentals for beginners.</p>
+          </div>
+        </div>
+        <!-- Video 4 -->
+        <div class="flex-none w-80 rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-800 hover:scale-105 transition-transform snap-start">
+          <iframe class="w-full h-56" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_4" title="Extra Tutorial" frameborder="0" allowfullscreen></iframe>
+          <div class="p-4">
+            <h4 class="font-semibold text-blue-500 mb-2">Extra Tutorial</h4>
+            <p>Additional tutorial content description goes here.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Carousel Indicators -->
+      <div id="carouselIndicators" class="flex justify-center space-x-2 mt-6">
+        <span class="w-3 h-3 rounded-full bg-blue-500 dark:bg-blue-400"></span>
+        <span class="w-3 h-3 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+        <span class="w-3 h-3 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+        <span class="w-3 h-3 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const carousel = document.getElementById('youtubeCarousel');
+    const indicators = document.getElementById('carouselIndicators').children;
+
+    carousel.addEventListener('scroll', () => {
+      const children = Array.from(carousel.children);
+      const carouselCenter = carousel.scrollLeft + carousel.offsetWidth / 2;
+      children.forEach((child, index) => {
+        const childCenter = child.offsetLeft + child.offsetWidth / 2;
+        if (Math.abs(carouselCenter - childCenter) < child.offsetWidth / 2) {
+          indicators[index].classList.remove('bg-gray-300', 'dark:bg-gray-600');
+          indicators[index].classList.add('bg-blue-500', 'dark:bg-blue-400');
+        } else {
+          indicators[index].classList.remove('bg-blue-500', 'dark:bg-blue-400');
+          indicators[index].classList.add('bg-gray-300', 'dark:bg-gray-600');
+        }
+      });
+    });
+  </script>
+
+  <!-- Downloadable CV -->
+  <section class="px-8 py-16 bg-gray-50 dark:bg-gray-800 text-center">
+    <h3 class="text-3xl font-bold mb-6">Download My CV</h3>
+    <p class="mb-4">Get my full professional and academic profile in PDF format.</p>
+    <!-- Download -->
+  <div class="text-center mt-8">
+    <button id="downloadBtn" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Download CV as PDF</button>
+  </div>
+</div>
+
+  <!-- Contact & Professional Highlights Section -->
+  <section class="px-8 py-16 bg-gradient-to-r from-blue-50 to-blue-100 dark:from-gray-800 dark:to-gray-700">
+    <div class="max-w-6xl mx-auto text-center space-y-10">
+      <!-- Contact -->
+      <div>
+        <h3 class="text-3xl font-bold mb-6">Get in Touch</h3>
+        <p class="mb-2">Email: <a href="mailto:niyonzimaisaac89@gmail.com" class="text-blue-600 dark:text-blue-400 hover:underline">niyonzimaisaac89@gmail.com</a></p>
+        <p class="mb-2">Phone: <a href="tel:+250782147772" class="text-blue-600 dark:text-blue-400 hover:underline">+250 782 147 772</a></p>
+        <div class="flex justify-center space-x-4 mt-4">
+          <a href="https://github.com/Niyonzima123" target="_blank"><img src="assets/images/github.png" alt="GitHub" class="w-8 h-8 inline" /></a>
+          <a href="#" target="_blank"><img src="assets/images/linkedin.png" alt="LinkedIn" class="w-8 h-8 inline" /></a>
+          <a href="https://www.youtube.com/channel/IsaacTech" target="_blank"><img src="assets/images/youtube.png" alt="YouTube" class="w-8 h-8 inline" /></a>
+          <a href="#" target="_blank"><img src="assets/images/facebook.png" alt="Facebook" class="w-8 h-8 inline" /></a>
+        </div>
+      </div>
+
+      <!-- Professional Highlights X-Y-Z -->
+      <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md p-8 space-y-4 text-left">
+        <h4 class="text-2xl font-bold text-blue-500 mb-4">Professional Highlights</h4>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>🚀 Built a Django Vendor Business Management System  using Python, PostgreSQL, and TailwindCSS  to digitize operations for small businesses in Rwanda .</li>
+          <li>💡 Completed AI and Web Development courses from HarvardX, IBM, and ALX Africa , leveraging Python, JavaScript, and AI tools  to develop practical software solutions (Z).</li>
+          <li>🎯 Developed professional digital workspace and virtual assistance skills  using ALX Africa training programs , enabling high productivity and remote collaboration (Z).</li>
+          <li>📺 Launched YouTube channel "IsaacTech" to teach tech tutorials and AI concepts , reaching learners and building community engagement .</li>
+          <li>🛠️ Practiced prompt engineering and AI-assisted coding  integrating modern AI systems into development workflows , boosting development speed and creativity .</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white text-center py-6 mt-8">
+    <p>&copy; 2025 Isaac Niyonzima. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
