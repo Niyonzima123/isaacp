@@ -1,7 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Poppins', sans-serif; background: #0f0f1e; color: #e0e0ff; overflow-x: hidden; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0f0f1e;
+  color: #e0e0ff;
+  overflow-x: hidden;
+}
 
 /* ===== NAVBAR ===== */
 #mainNav {
@@ -9,8 +19,58 @@ body { font-family: 'Poppins', sans-serif; background: #0f0f1e; color: #e0e0ff; 
   backdrop-filter: blur(10px);
   transition: 0.3s;
   padding: 10px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
-#mainNav.scrolled { background: rgba(10, 10, 30, 0.95); }
+#mainNav.scrolled {
+  background: rgba(10, 10, 30, 0.95);
+}
+
+#mainNav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+#mainNav ul li a {
+  color: #e0e0ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+#mainNav ul li a:hover,
+#mainNav ul li a.active {
+  color: #00c6ff;
+}
+
+/* ===== MENU TOGGLE (MOBILE) ===== */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: #fff;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.menu-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
 
 /* ===== HERO SECTION ===== */
 .hero {
@@ -102,14 +162,25 @@ body { font-family: 'Poppins', sans-serif; background: #0f0f1e; color: #e0e0ff; 
 }
 
 /* ===== PROGRESS BAR ===== */
-.progress { height: 8px; background: rgba(255,255,255,0.1); border-radius: 4px; }
-.progress-bar { background: linear-gradient(90deg, #4a00e0, #00c6ff); }
+.progress {
+  height: 8px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 4px;
+}
+.progress-bar {
+  background: linear-gradient(90deg, #4a00e0, #00c6ff);
+}
 
 /* ===== BACKGROUND GRADIENTS ===== */
-.bg-gradient-dark { background: linear-gradient(135deg, #1a0033, #0f0f1e); }
+.bg-gradient-dark {
+  background: linear-gradient(135deg, #1a0033, #0f0f1e);
+}
 
 /* ===== ANIMATIONS ===== */
-[data-animate] { opacity: 0; transform: translateY(30px); }
+[data-animate] {
+  opacity: 0;
+  transform: translateY(30px);
+}
 .animate__fadeInLeft { animation: fadeInLeft 0.8s forwards; }
 .animate__fadeInUp { animation: fadeInUp 0.8s forwards 0.2s; }
 .animate__fadeInRight { animation: fadeInRight 0.8s forwards 0.4s; }
@@ -122,6 +193,9 @@ body { font-family: 'Poppins', sans-serif; background: #0f0f1e; color: #e0e0ff; 
 
 /* Tablets (<= 992px) */
 @media (max-width: 992px) {
+  #mainNav ul {
+    gap: 15px;
+  }
   .glass-card {
     max-width: 90%;
     padding: 15px;
@@ -137,11 +211,32 @@ body { font-family: 'Poppins', sans-serif; background: #0f0f1e; color: #e0e0ff; 
   h1, h2, h3 { text-align: center; }
 }
 
-/* Mobile phones (<= 600px) */
-@media (max-width: 600px) {
-  body { font-size: 0.95rem; }
-  #mainNav { padding: 10px 20px; text-align: center; }
-  
+/* Mobile phones (<= 768px) */
+@media (max-width: 768px) {
+  #mainNav ul {
+    display: none;
+    flex-direction: column;
+    background: rgba(10,10,30,0.95);
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    border-radius: 10px;
+    padding: 15px;
+  }
+
+  #mainNav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  #mainNav {
+    padding: 10px 20px;
+  }
+
   .hero {
     padding: 70px 15px;
   }
