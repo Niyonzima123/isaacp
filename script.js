@@ -1,24 +1,26 @@
-// Wait for DOM to load
-document.addEventListener('DOMContentLoaded', function() {
-  // Smooth scrolling for internal links
+// Wait until the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', function () {
+  // ===== Smooth Scrolling for Anchor Links =====
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));
-      if (target) target.scrollIntoView({ behavior: 'smooth' });
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
   });
 
-  // Active nav link highlighting
+  // ===== Navbar Active Link Highlight =====
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-link').forEach(link => {
-    if (link.getAttribute('href') === currentPage ||
-       (currentPage === 'index.html' && link.getAttribute('href') === 'index.html')) {
+    const href = link.getAttribute('href');
+    if (href === currentPage || (currentPage === 'index.html' && href === 'index.html')) {
       link.classList.add('active');
     }
   });
 
-  // Responsive mobile menu toggle
+  // ===== Mobile Menu Toggle =====
   const menuToggle = document.querySelector('.menu-toggle');
   const navMenu = document.querySelector('#mainNav ul');
 
@@ -29,41 +31,46 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Close mobile menu after clicking a link
+  // ===== Close menu when a link is clicked =====
   document.querySelectorAll('#mainNav ul li a').forEach(link => {
     link.addEventListener('click', () => {
-      if (navMenu && navMenu.classList.contains('show')) {
+      if (navMenu.classList.contains('show')) {
         navMenu.classList.remove('show');
         menuToggle.classList.remove('open');
       }
     });
   });
+
+  // ===== Animate elements when they appear on scroll =====
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const animation = entry.target.getAttribute('data-animate');
+        entry.target.style.animation = `${animation} 0.8s ease forwards`;
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
 });
 
-// Navbar background change on scroll
+// ===== Navbar Background Change on Scroll =====
 window.addEventListener('scroll', () => {
   const nav = document.getElementById('mainNav');
-  if (nav) {
-    nav.classList.toggle('scrolled', window.scrollY > 50);
+  if (window.scrollY > 50) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
   }
 });
 
-// Animate elements on scroll
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const animate = entry.target.getAttribute('data-animate');
-      if (animate) entry.target.style.animation = `${animate} 0.8s forwards`;
-    }
-  });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
-
-// Handle resize events (optional)
+// ===== Resize Fix (for switching between mobile and desktop view) =====
 window.addEventListener('resize', () => {
   const navMenu = document.querySelector('#mainNav ul');
-  if (window.innerWidth > 768 && navMenu && navMenu.classList.contains('show')) {
+  const menuToggle = document.querySelector('.menu-toggle');
+  if (window.innerWidth > 768 && navMenu.classList.contains('show')) {
     navMenu.classList.remove('show');
+    menuToggle.classList.remove('open');
   }
 });
